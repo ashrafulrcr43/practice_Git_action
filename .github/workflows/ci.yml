@@ -10,3 +10,8 @@ jobs:
       steps:
       - name: Print Hello World
         run: echo "hello World"
+      - name: Making Folder
+        run : mkdir latest
+      - name: Listing ls Comment
+        run: ls -al
+        
