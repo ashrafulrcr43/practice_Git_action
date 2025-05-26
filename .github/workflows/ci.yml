@@ -14,4 +14,6 @@ jobs:
         run : mkdir latest
       - name: Listing ls Comment
         run: ls -al
+      - name: Read hello.txt file
+        run: cat hello.txt
         
