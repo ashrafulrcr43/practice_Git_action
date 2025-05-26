@@ -4,18 +4,25 @@ on:
   push:
     branches:
       - main
+
 jobs:
   job1:
-      runs-on: ubuntu-latest
-      steps:
+    runs-on: ubuntu-latest
+    steps:
       - name: Print Hello World
         run: echo "hello World"
+
       - name: Clone Repo
         uses: actions/checkout@v3
+
       - name: Making Folder
-        run : mkdir latest
+        run: mkdir latest
+
       - name: Listing ls Comment
         run: ls -al
+
+      - name: Create hello.txt
+        run: echo "This is hello.txt" > hello.txt
+
       - name: Print hello.txt file
         run: cat hello.txt
-
