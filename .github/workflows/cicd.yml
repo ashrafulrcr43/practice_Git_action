@@ -1,0 +1,34 @@
+name: Test and deploy Application
+
+on:
+    push:
+        branches:
+            -   main
+
+    pull_request:
+        branches:
+            -   main
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkout the repo
+              uses: actions/checkout@v3
+
+            - name: Install Node
+              uses: actions/setup-node@v4
+              with:
+                node-version: "22"
+
+            - name: Check node Version
+              run: node --version
+
+            - name: Install Application Dependency 
+              run: npm install
+
+            - name: Print The Check Report
+              run: npm run check
+            
+
