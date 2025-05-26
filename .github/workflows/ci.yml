@@ -1,11 +1,11 @@
-name: Ci Cd Pipeline
+name: CI CD Pipeline Testing
 on:
   push:
       branches:
-        - main:
+            - main:
 jobs:
   job1:
       runs-on: ubuntu-latest
       steps:
       - name: Print Hello World
-        run: 
+        run: echo "hello World"
