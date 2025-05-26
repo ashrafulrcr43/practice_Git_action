@@ -11,11 +11,11 @@ jobs:
       - name: Print Hello World
         run: echo "hello World"
       - name: Clone Repo
-        run: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: Making Folder
         run : mkdir latest
       - name: Listing ls Comment
         run: ls -al
-      - name: Read hello.txt file
+      - name: Print hello.txt file
         run: cat hello.txt
 
